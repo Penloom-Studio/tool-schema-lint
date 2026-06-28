@@ -1,0 +1,47 @@
+{
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "run",
+        "description": "Runs it.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string",
+              "description": "The status to set."
+            },
+            "options": {
+              "type": "object",
+              "description": "Extra options."
+            },
+            "payload": {
+              "description": "Whatever data to send."
+            },
+            "flag": {
+              "type": "boolean",
+              "description": "A flag."
+            }
+          },
+          "required": ["x", "user_id"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "do_thing",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "q": { "type": "string", "description": "The query." }
+          }
+        }
+      }
+    }
+  ]
+}

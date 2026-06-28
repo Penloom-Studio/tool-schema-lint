@@ -1,0 +1,35 @@
+{
+  "name": "tool-schema-lint",
+  "version": "1.0.0",
+  "description": "A reliability linter for the JSON tool/function schemas you give an LLM. Flags the pitfalls that make agents pick the wrong tool or fill arguments wrong — thin descriptions, undocumented params, untyped fields, and `required` entries that reference properties that don't exist. Supports Anthropic and OpenAI tool formats.",
+  "type": "module",
+  "bin": {
+    "tool-schema-lint": "index.mjs"
+  },
+  "main": "index.mjs",
+  "scripts": {
+    "test": "node index.mjs examples/good-tools.json && node index.mjs examples/bad-tools.json || true"
+  },
+  "keywords": [
+    "ai-agents",
+    "llm",
+    "tool-calling",
+    "function-calling",
+    "json-schema",
+    "mcp",
+    "claude",
+    "openai",
+    "linter",
+    "agent"
+  ],
+  "author": "Penloom Studio",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Penloom-Studio/tool-schema-lint"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://penloomstudio.com"
+}

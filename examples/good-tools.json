@@ -1,0 +1,52 @@
+[
+  {
+    "name": "get_weather",
+    "description": "Get the current weather conditions for a specific location. Use this when the user asks about temperature, precipitation, or conditions right now. Do NOT use it for multi-day forecasts — use get_forecast for those.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "City and region, e.g. 'Naples, FL' or 'London, UK'. Be as specific as the user allows to avoid ambiguous matches."
+        },
+        "units": {
+          "type": "string",
+          "description": "Temperature unit system to return values in.",
+          "enum": ["celsius", "fahrenheit"]
+        }
+      },
+      "required": ["location"]
+    }
+  },
+  {
+    "name": "create_invoice",
+    "description": "Create a new draft invoice for a customer with one or more line items. Returns the invoice id. Use this only after the customer and line items are confirmed; it does not send the invoice.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "type": "string",
+          "description": "The id of an existing customer, obtained from find_customer."
+        },
+        "line_items": {
+          "type": "array",
+          "description": "The products or services being billed.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": { "type": "string", "description": "Human-readable name of the line item." },
+              "amount_cents": { "type": "integer", "description": "Price for this line item in cents (USD)." }
+            },
+            "required": ["description", "amount_cents"]
+          }
+        },
+        "status": {
+          "type": "string",
+          "description": "Initial status of the invoice.",
+          "enum": ["draft", "open"]
+        }
+      },
+      "required": ["customer_id", "line_items"]
+    }
+  }
+]
