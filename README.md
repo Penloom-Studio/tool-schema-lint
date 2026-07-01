@@ -101,9 +101,9 @@ npx tool-schema-lint tools/agent-tools.json || {
 
 ## Going further
 
-This linter catches *where* a tool schema will trip up the model. If you want the patterns that make the whole agent reliable:
+This linter catches *where* a tool schema will trip up the model. If you want the fixes:
 
-- **Free field guide** — the core reliability rules plus paste-ready guardrails: **https://penloomstudio.com/field-guide.html**
-- **The Agent Builder's Toolkit ($19)** — 23 reliability-focused system prompts, the tool-design patterns this linter operationalizes, an eval rubric for grading agent runs, and 10 starter agents: **https://penloomstudio.com** ([checkout](https://buy.stripe.com/aFa3cu9x8deub1N9yL3F601))
+- **The Tool-Calling Reliability Pack ($2.99)** — the exact fixes for what this linter flags: a 60-second schema scorecard, the mechanism in plain English (why the model picks the wrong tool and fills args wrong), five real before→after schema rewrites, and drop-in templates you can paste today (Claude tool use, OpenAI function-calling, any framework): **[get it →](https://buy.stripe.com/8x2aEWfVwgqG7PB7qD3F608)**
+- **The Agent Builder's Toolkit ($19)** — going deeper: 23 reliability-focused system prompts, the tool-design patterns this linter operationalizes, an eval rubric for grading agent runs, and 10 starter agents: **[get it →](https://buy.stripe.com/aFa3cu9x8deub1N9yL3F601)**
 
 Built by [Penloom Studio](https://penloomstudio.com). MIT licensed — fork it, ship it, send a PR.
