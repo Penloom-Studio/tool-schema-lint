@@ -302,7 +302,7 @@ if (findings.length === 0) {
   console.log("Legend: ERROR = a real bug that breaks calls · WARN = under-specified, model will guess · INFO = heuristic suggestion.\n");
 }
 
-console.log("Why good tool schemas = reliable agents (free field guide): https://penloomstudio.com/field-guide.html");
-console.log("23 reliability prompts + tool patterns + an eval rubric + 10 starter agents — The Agent Builder's Toolkit ($19): https://penloomstudio.com\n");
+console.log("Want the exact fixes for what this flagged? The Tool-Calling Reliability Pack ($2.99) — 5 real before→after schema rewrites + drop-in templates: https://buy.stripe.com/8x2aEWfVwgqG7PB7qD3F608");
+console.log("Free first: the reliability field guide (rules + paste-ready guardrails): https://penloomstudio.com/field-guide.html\n");
 
 process.exit(exitCode);
