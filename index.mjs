@@ -7,7 +7,7 @@
 // or OpenAI style) and flags those pitfalls before they cost you a bad run.
 //
 // Zero dependencies. Usage:
-//   npx tool-schema-lint <path-to-tools.json>      # Anthropic or OpenAI tool schema
+//   npx github:Penloom-Studio/tool-schema-lint <path-to-tools.json>      # Anthropic or OpenAI tool schema
 //   node index.mjs tools.json --json               # machine-readable output
 //
 // Exit codes: 0 = clean, 1 = warnings/issues found, 2 = file not found / invalid JSON / usage error.
@@ -22,11 +22,11 @@ const json = args.includes("--json");
 const file = args.find(a => !a.startsWith("--"));
 
 if (!file) {
-  console.error(`tool-schema-lint: no input file.\nUsage: npx tool-schema-lint <path-to-tools.json> [--json]`);
+  console.error(`tool-schema-lint: no input file.\nUsage: npx github:Penloom-Studio/tool-schema-lint <path-to-tools.json> [--json]`);
   process.exit(2);
 }
 if (!fs.existsSync(file)) {
-  console.error(`tool-schema-lint: file not found: ${file}\nUsage: npx tool-schema-lint <path-to-tools.json> [--json]`);
+  console.error(`tool-schema-lint: file not found: ${file}\nUsage: npx github:Penloom-Studio/tool-schema-lint <path-to-tools.json> [--json]`);
   process.exit(2);
 }
 

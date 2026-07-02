@@ -7,7 +7,7 @@ Your agent's tool-calling is only as reliable as the tool definitions behind it.
 `tool-schema-lint` reads your tool schemas (Anthropic *or* OpenAI format) and flags those pitfalls before they cost you a bad run.
 
 ```bash
-npx tool-schema-lint your-tools.json
+npx github:Penloom-Studio/tool-schema-lint your-tools.json
 ```
 
 No install, no dependencies, nothing leaves your machine.
@@ -69,8 +69,8 @@ Tools analyzed: 2   Errors: 2  Warnings: 5  Suggestions: 5
 A well-formed schema scores 100/100 with no findings. Try it on the included fixtures:
 
 ```bash
-npx tool-schema-lint examples/good-tools.json   # 🟢 100/100
-npx tool-schema-lint examples/bad-tools.json    # 🔴 surfaces every check
+npx github:Penloom-Studio/tool-schema-lint examples/good-tools.json   # 🟢 100/100
+npx github:Penloom-Studio/tool-schema-lint examples/bad-tools.json    # 🔴 surfaces every check
 ```
 
 ## CI usage
@@ -88,13 +88,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
-      - run: npx tool-schema-lint tools/agent-tools.json
+      - run: npx github:Penloom-Studio/tool-schema-lint tools/agent-tools.json
 ```
 
 Or as a pre-commit guard:
 
 ```bash
-npx tool-schema-lint tools/agent-tools.json || {
+npx github:Penloom-Studio/tool-schema-lint tools/agent-tools.json || {
   echo "Fix the tool-schema issues above before committing."; exit 1;
 }
 ```
